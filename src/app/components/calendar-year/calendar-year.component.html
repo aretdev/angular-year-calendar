@@ -1,0 +1,26 @@
+
+<div class="container main-calendar">
+    <ng-container *ngFor="let ins of counter(12); let i = index">
+        <div class="calendar-year-wraper">
+
+            <div class="calendar-month">
+                
+                <div class="weekdays-section">
+                    <div class="week-names" *ngFor="let weekday of weekDays">
+                        {{weekday}}
+                    </div>
+                </div>
+
+                <div class="week-names-section">
+                    <div class="week-names" *ngFor="let day of generateWeek(i)">
+                        <app-calendar-day [referenceDay]="day">
+    
+                        </app-calendar-day>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+

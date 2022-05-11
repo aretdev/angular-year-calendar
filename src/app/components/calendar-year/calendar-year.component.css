@@ -1,0 +1,28 @@
+.calendar-month {
+    width: 210px;
+    height: 200px;
+    display: inline-block;
+}
+
+.weekday, .week-names {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.calendar-year-wraper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 10px;
+}
+.weekdays-section {
+    margin-bottom: 10px;
+}
+
+.main-calendar {
+    display: flex; flex-wrap: wrap; align-items: end;
+}
