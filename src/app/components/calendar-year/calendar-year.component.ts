@@ -51,10 +51,17 @@ export class CalendarYearComponent implements OnInit {
 
   generateWeek(month : number) {
     let first_day_month =new Date(2022, month, 1).getDay()
-    first_day_month = (first_day_month - 1 < 0) ? 0 : first_day_month;
+    first_day_month = (first_day_month - 1 < 0) ? 7 : first_day_month;
     let filledArray = (first_day_month == 0) ? [] : new Array(first_day_month - 1).fill({})
-    return filledArray.concat(Array.from(this.monthDays.values()).filter(x => x.festiveDate.getMonth() == 0))
+    return filledArray.concat(Array.from(this.monthDays.values()).filter(x => x.festiveDate.getMonth() == month))
 
+  }
+
+  getMonthName(month: number) : string {
+    const dateObj = new Date(2022,month,1)
+    console.log(dateObj)
+    const monthName = dateObj.toLocaleString("en-US", {month : "long"})
+    return monthName
   }
 
   weeksCount(year: number, month_number: number) {

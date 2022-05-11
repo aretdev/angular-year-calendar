@@ -1,1 +1,1 @@
-    {{ referenceDay?.festiveDate?.getDate() }}
+  <span class="blank" [ngClass]="{'weekend' :isWeekend, 'day' : referenceDay?.festiveDate}">  {{ referenceDay?.festiveDate?.getDate() }}</span>

@@ -11,10 +11,15 @@ export class CalendarDayComponent implements OnInit {
 
   @Input() referenceDay : Day | undefined;
 
+  isWeekend : boolean = false;
   constructor() { 
   }
 
   ngOnInit(): void {
+    if(this.referenceDay?.festiveDate != undefined) {
+      let dayOfTheWeek = this.referenceDay.festiveDate.getDay()
+      this.isWeekend = (dayOfTheWeek == 6) || (dayOfTheWeek == 0)
+    }
   }
 
 }

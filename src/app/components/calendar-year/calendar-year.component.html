@@ -4,7 +4,7 @@
         <div class="calendar-year-wraper">
 
             <div class="calendar-month">
-                
+                <div> {{getMonthName(i)}}</div>
                 <div class="weekdays-section">
                     <div class="week-names" *ngFor="let weekday of weekDays">
                         {{weekday}}
@@ -12,11 +12,11 @@
                 </div>
 
                 <div class="week-names-section">
-                    <div class="week-names" *ngFor="let day of generateWeek(i)">
+                    <ng-container *ngFor="let day of generateWeek(i)">
                         <app-calendar-day [referenceDay]="day">
     
                         </app-calendar-day>
-                    </div>
+                    </ng-container>
                 </div>
             </div>
         </div>

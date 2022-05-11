@@ -1,0 +1,16 @@
+.weekend {
+    color:red;
+}
+.blank {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+.day {
+    cursor: pointer;
+}
+
+.day:hover {
+    outline: 1px solid grey;
+    outline-offset: 0px;
+}
